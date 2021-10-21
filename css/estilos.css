@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter Regular;
+}
+
+@font-face {
+  font-family: Inter-Regular;
+  src: url(Inter-Regular.woff2);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+section {
+  padding: 1em 5em;
+}
+
+.logo {
+  position: absolute;
+  width: 20%;
+  display: flex;
+}
+
+h3 {
+  padding: 0.2em 0.5em 0 0.5em;
+  color: #0d291a;
+}
+
+
+.container {
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+  padding: 60px 70px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  perspective: 2700px;
+}
+
+.container .cover {
+  position: absolute;
+  background-image: url(../img/Image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  z-index: 98;
+  transition: all 1s ease;
+  transform-origin: left;
+  transform-style: preserve-3d;
+}
+
+.container #flip:checked~.cover {
+  transform: rotateY(-180deg);
+}
+
+.container .cover .front, .container .cover .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.cover .back {
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.container .cover::before, .container .cover::after {
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: 12;
+}
+
+.container .cover::after {
+  background-image: url(../img/Image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.container .cover img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 10;
+}
+
+.container .cover .text {
+  position: absolute;
+  z-index: 130;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover .text .text-1, .cover .text .text-2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.cover .text .text-2 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.container .forms {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+
+.container .form-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-content .login-form, .form-content .signup-form {
+  width: calc(100% / 2 - 25px);
+}
+
+.forms .form-content .title {
+  position: relative;
+  font-size: 1em;
+  font-weight: 800;
+  color: #0d291a;
+}
+
+.log-tit {
+  position: relative;
+  font-size: 2em;
+  font-weight: 900;
+  margin-top: 0.3em;
+  color: #0d291a;
+}
+
+.forms .signup-form .title:before {
+  width: 20px;
+}
+
+.forms .form-content .input-boxes {
+  margin-top: 1.8em;
+}
+
+.forms .form-content .input-box {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+
+.form-content .input-box input {
+  height: 65%;
+  width: 95%;
+  padding: 0 4.5em 0 0.5em;
+  font-size: 0.9em;
+  font-weight: 500;
+  border-radius: 3%;
+  border-bottom: 2px solid #0d291a;
+  transition: all 0.3s ease;
+}
+
+.forms .form-content .text {
+  font-size: 0.5em;
+  font-weight: 300;
+  color: #333;
+}
+
+.forms .form-content .text a {
+  text-decoration: none;
+}
+
+.forms .form-content .text a:hover {
+  text-decoration: underline;
+}
+
+.forms .form-content .button {
+  color: #fff;
+}
+
+.forms .form-content .button input {
+  color: #fff;
+  background: #0d291a;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.forms .form-content .button input:hover {
+  background: #163d29ec;
+}
+
+.forms .form-content label {
+  color: #8f9b24;
+  cursor: pointer;
+}
+
+.forms .form-content label:hover {
+  text-decoration: underline;
+}
+
+.forms .form-content .login-text, .forms .form-content .sign-up-text {
+  text-align: left;
+  font-size: .75em;
+}
+
+.form-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-right: 2em;
+}
+
+.text-1 {
+  font-size: 0.8em;
+  color: #0d291a
+}
+
+.text-1 a {
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #0d291a;
+  padding-left: 2em;
+}
+
+.container #flip {
+  display: none;
+}
+
+
+.foot-text {
+  font-size: .4em;
+  color: #0d291a;
+  text-align: center;
+}
+
+.sp-text {
+  color: #8f9b24;
+}
+
+.foot-box {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5em;
+  justify-content: space-between;
+}
+
+
+@media (max-width: 730px) {
+  .container .cover {
+    display: none;
+  }
+  .form-content .login-form, .form-content .signup-form {
+    width: 100%;
+  }
+  .form-content .signup-form {
+    display: none;
+  }
+  .container #flip:checked~.forms .signup-form {
+    display: block;
+  }
+  .container #flip:checked~.forms .login-form {
+    display: none;
+  }
+}
