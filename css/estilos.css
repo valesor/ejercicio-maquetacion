@@ -26,6 +26,8 @@ section {
   position: absolute;
   width: 20%;
   display: flex;
+  padding-left: 1em;
+    padding-top: 0.8em;
 }
 
 h3 {
