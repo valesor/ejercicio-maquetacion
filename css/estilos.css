@@ -293,11 +293,7 @@ h3 {
 }
 
 @media (max-width: 500px) {
-  .form-tex {
-    display:flex;
-    flex-direction: column;
-
-  }
+  
    .pass{
     display:none;
   }
@@ -310,3 +306,12 @@ h3 {
   }
 
   }
+
+  @media (max-width: 500px) {
+    
+    .form-content .input-box input {
+      font-size: 0.5em;
+      
+    }
+  
+    }
