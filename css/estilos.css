@@ -286,4 +286,27 @@ h3 {
   .container #flip:checked~.forms .login-form {
     display: none;
   }
+  
+  
+
+
 }
+
+@media (max-width: 500px) {
+  .form-tex {
+    display:flex;
+    flex-direction: column;
+
+  }
+   .pass{
+    display:none;
+  }
+  .terms{
+    display:none;
+  }
+  .form-content .input-box input {
+    font-size: 0.7em;
+    
+  }
+
+  }
