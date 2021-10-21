@@ -304,13 +304,30 @@ h3 {
     font-size: 0.7em;
     
   }
-
+  .logo {
+    padding-left: 0.7em;
+    padding-top: 0.5em;
   }
 
-  @media (max-width: 500px) {
+  .remember-text {
+  
+      font-size: 0.5em;
+      
+    }
+    
+  }
+
+  
+
+  @media (max-width: 450px) {
     
     .form-content .input-box input {
-      font-size: 0.5em;
+      font-size: 0.5em; 
+    }
+
+    .remember-text {
+  
+      font-size: 0.450em;
       
     }
   
